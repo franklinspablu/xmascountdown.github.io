@@ -29,13 +29,13 @@ let seconds = 0;
 if (currentMonth !== 12 || (currentMonth === 12 && currentDay !== 25)) {
     days = Math.floor(timeLeft / 1000 / 60 / 60 / 24);
     hours = Math.floor(timeLeft / 1000 / 60 / 60) % 24;
-    mins = Math.floor(timeLeft / 1000 / 60) % 60;
-    secs = Math.floor(timeLeft / 1000) % 60;
+    minutes = Math.floor(timeLeft / 1000 / 60) % 60;
+    seconds = Math.floor(timeLeft / 1000) % 60;
   }
   days.innerHTML = days < 10 ? `0${days}` : days;
   hours.innerHTML = hours < 10 ? `0${hours}` : hours;
-  minutes.innerHTML = minutes < 10 ? `0${minutes}` : minutess;
-  secondss.innerHTML = seconds < 10 ? `0${secondss}` : seconds;
+  minutes.innerHTML = minutes < 10 ? `0${minutes}` : minutes;
+  seconds.innerHTML = seconds < 10 ? `0${seconds}` : seconds;
 }
 
 setInterval(calculateChristmasCountdown, 1000);
